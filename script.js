@@ -1,8 +1,10 @@
 class Movie {
-    constructor(title, director, year) {
+    constructor(title, director, year, image) {
         this.title = title;
         this.director = director;
         this.year = year;
+        this.image = image;
+
     }
 
     getDetails() {
@@ -91,5 +93,15 @@ actionMovies.forEach(movie => {
     console.log(movie.getDetails());
 });
 
-const movies = movieLibrary.movie.map(item, index)
+const movies = movieLibrary.map(movie => {
+    document.getElementById("container").innerHTML += `
+    <div>
+    <div><img src="${movie.image}" alt=""></div>
+    <p>${movie.title}</p>
+    <p>${movie.director}</p>
+    <p>${movie.year}</p>
+
+</div>
+    `
+})
 console.log(movies)
