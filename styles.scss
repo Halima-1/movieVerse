@@ -19,83 +19,36 @@
  }
 
  header {
-     width: 95%;
-     // margin: auto;
-     padding: 10px 0;
-     padding-left: 20px;
-     display: flex;
-     flex-direction: row;
-     justify-content: space-between !important;
-
-     #span {
-         // height: 3px;
-         width: 30px;
-         display: flex;
-         flex-direction: column;
-         margin-top: 20px;
-
-         p {
-             width: 30px;
-             height: 3px;
-             background-color: black;
-             margin-top: 6px;
-         }
-     }
+     width: 90%;
+     margin: auto;
+     padding: 25px 0;
 
      nav {
          // background-color: $bg2;
          padding: 20px;
-
          // position: fixed;
-         // top: 0;
-         width: 90%;
+         top: 0;
+         width: 100%;
          display: flex;
          flex-direction: row;
-         justify-content: space-between !important;
-         //color: $text-color2;
+         justify-content: space-between;
+         //  color: $text-color2;
          font-size: 14px;
-
          // border-bottom: 1px dotted gray;
          // border-bottom-style: ;
+
          h1 {
-             margin-bottom: 10px;
-             font-weight: 500;
+             color: black;
+             font-weight: 600;
          }
-
-         // .navv {
-         // display: none;
-         // visibility: hidden;
-         // }
-
-
-     }
-
-     .nav-brand {
-         margin: 0;
-     }
-
-     .nav-icon {
-         margin-top: 2px;
-
      }
 
 
-     // ul {
-     //     /* width: 100%;
-     //         padding: 20px 40px; */
-     //     display: flex;
-     //     flex-direction: column;
-     //     // justify-content: space-between;
-     //     // gap: 15px;
-     // }
-     //  .navv {
-     //      display: none;
-     //  }
-
-     .logo {
+     ul {
          display: flex;
          flex-direction: row;
-         gap: 10px;
+         justify-content: space-between;
+         gap: 15px;
      }
 
      li {
@@ -103,17 +56,13 @@
      }
 
      .nav-item {
-         font-size: 14px;
+         font-size: 16px;
          text-decoration: none;
          color: rgb(117, 111, 111);
-         // border-bottom: 3px solid rgb(204, 201, 201);
-         // padding-bottom: 22px;
-
-         /* margin-left: ; */
      }
 
      .nav-item:hover {
-         // border-top: 3px solid navy;
+         border-top: 3px solid navy;
          color: black;
          background-color: rgb(240, 243, 247);
          color: rgb(160, 154, 154);
@@ -125,24 +74,20 @@
          width: 30px;
          height: 30px;
          border-radius: 100%;
-         margin-top: -3px;
      }
 
      .cart-svg {
-         width: 25px;
-         height: 25px;
-         margin-top: 1px;
+         width: 30px;
+         height: 30px;
      }
 
      span {
          color: white;
-         position: relative;
+         // position: absolute;
          background-color: red;
          padding: 0 4px;
          border-radius: 100%;
          font-size: 12px;
-         bottom: 15px;
-         left: 10px;
      }
 
 
@@ -213,15 +158,38 @@
              height: 250px;
              position: relative;
 
-             div {
+
+             .movie-desc {
+                 position: absolute;
+                 top: 50px;
+                 //  left: 0px;
+                 text-align: center;
+                 //  background-color: #333;
+                 //  opacity: 0.5;
+                 height: fit-content;
+                 border-radius: 0;
+
+                 &:hover {
+                     opacity: 1;
+                 }
 
                  .title,
                  .dir,
                  .year {
-                     position: absolute;
-                     bottom: 50px;
-                     left: 30px;
+                     //  position: absolute;
+                     //  
+                     line-height: 35px;
                  }
+             }
+
+             button {
+                 width: 50%;
+                 padding: 10px 3px;
+                 border: none;
+                 border-radius: 10px;
+                 background-color: blue;
+                 margin: 0 auto;
+                 margin-left: 90px;
              }
 
              div {
@@ -236,11 +204,13 @@
                      object-fit: fill;
                      border-radius: 10px;
 
+                     opacity: 1;
 
                      &:hover {
                          transform: scale(1.2);
                          transition: all 1s ease-in-out;
-                         margin: 0 30px
+                         opacity: 0;
+                         //  margin: 0 30px
                      }
 
                  }

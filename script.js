@@ -116,10 +116,12 @@ latestMovies.map(movie => {
     
 </a>
 <div class="movie-desc">
-<h1 class="title>${movie.title}</h1>
-<p class="dir>${movie.director}</p>
-<p class="year>${movie.year}</p>
+<h1 class="title">${movie.title}</h1>
+<p class="dir">Directed by ${movie.director}</p>
+<p class="year">${movie.year}</p>
 </div>
+<button type="button">Add to Library</button>
+
 </div>
     `
 })

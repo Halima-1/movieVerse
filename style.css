@@ -11,58 +11,39 @@ p {
 }
 
 header {
-  width: 95%;
-  padding: 10px 0;
-  padding-left: 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between !important;
-}
-header #span {
-  width: 30px;
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
-}
-header #span p {
-  width: 30px;
-  height: 3px;
-  background-color: black;
-  margin-top: 6px;
+  width: 90%;
+  margin: auto;
+  padding: 25px 0;
 }
 header nav {
   padding: 20px;
-  width: 90%;
+  top: 0;
+  width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between !important;
+  justify-content: space-between;
   font-size: 14px;
 }
 header nav h1 {
-  margin-bottom: 10px;
-  font-weight: 500;
+  color: black;
+  font-weight: 600;
 }
-header .nav-brand {
-  margin: 0;
-}
-header .nav-icon {
-  margin-top: 2px;
-}
-header .logo {
+header ul {
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  justify-content: space-between;
+  gap: 15px;
 }
 header li {
   list-style: none;
 }
 header .nav-item {
-  font-size: 14px;
+  font-size: 16px;
   text-decoration: none;
   color: rgb(117, 111, 111);
-  /* margin-left: ; */
 }
 header .nav-item:hover {
+  border-top: 3px solid navy;
   color: black;
   background-color: rgb(240, 243, 247);
   color: rgb(160, 154, 154);
@@ -73,22 +54,17 @@ header li img {
   width: 30px;
   height: 30px;
   border-radius: 100%;
-  margin-top: -3px;
 }
 header .cart-svg {
-  width: 25px;
-  height: 25px;
-  margin-top: 1px;
+  width: 30px;
+  height: 30px;
 }
 header span {
   color: white;
-  position: relative;
   background-color: red;
   padding: 0 4px;
   border-radius: 100%;
   font-size: 12px;
-  bottom: 15px;
-  left: 10px;
 }
 
 .hide {
@@ -143,15 +119,35 @@ main #latest div {
   height: 250px;
   position: relative;
 }
-main #container div .title,
-main #container div .dir,
-main #container div .year,
-main #latest div .title,
-main #latest div .dir,
-main #latest div .year {
+main #container div .movie-desc,
+main #latest div .movie-desc {
   position: absolute;
-  bottom: 50px;
-  left: 30px;
+  top: 50px;
+  text-align: center;
+  height: fit-content;
+  border-radius: 0;
+}
+main #container div .movie-desc:hover,
+main #latest div .movie-desc:hover {
+  opacity: 1;
+}
+main #container div .movie-desc .title,
+main #container div .movie-desc .dir,
+main #container div .movie-desc .year,
+main #latest div .movie-desc .title,
+main #latest div .movie-desc .dir,
+main #latest div .movie-desc .year {
+  line-height: 35px;
+}
+main #container div button,
+main #latest div button {
+  width: 50%;
+  padding: 10px 3px;
+  border: none;
+  border-radius: 10px;
+  background-color: blue;
+  margin: 0 auto;
+  margin-left: 90px;
 }
 main #container div div,
 main #latest div div {
@@ -166,12 +162,13 @@ main #latest div div img {
   object-position: cover;
   object-fit: fill;
   border-radius: 10px;
+  opacity: 1;
 }
 main #container div div img:hover,
 main #latest div div img:hover {
   transform: scale(1.2);
   transition: all 1s ease-in-out;
-  margin: 0 30px;
+  opacity: 0;
 }
 main #container div div :hover,
 main #latest div div :hover {
