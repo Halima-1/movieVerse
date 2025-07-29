@@ -141,21 +141,17 @@ main #latest {
 main #container div,
 main #latest div {
   height: 250px;
-  position: absolute;
-  top: 30%;
-  width: 70%;
-  left: 50px;
-  padding: 10px;
+  position: relative;
 }
-main #container div .movie-desc .title,
-main #container div .movie-desc .dir,
-main #container div .movie-desc .year,
-main #latest div .movie-desc .title,
-main #latest div .movie-desc .dir,
-main #latest div .movie-desc .year {
+main #container div .title,
+main #container div .dir,
+main #container div .year,
+main #latest div .title,
+main #latest div .dir,
+main #latest div .year {
   position: absolute;
-  top: 10%;
-  left: 50px;
+  bottom: 50px;
+  left: 30px;
 }
 main #container div div,
 main #latest div div {
