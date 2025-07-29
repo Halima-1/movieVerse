@@ -97,11 +97,34 @@ const movies = movieLibrary.map(movie => {
     document.getElementById("container").innerHTML += `
     <div>
     <a href=""><div><img src="${movie.image}" alt=""></div>
-    <p>${movie.title}</p>
-    <p>${movie.director}</p>
-    <p>${movie.year}</p>
+    <p class="title>>${movie.title}</p>
+    <p class="dir>>${movie.director}</p>
+    <p class="year>>${movie.year}</p>
 </a>
 </div>
     `
 })
 console.log(movies)
+
+
+const latestMovies = movieLibrary.slice().sort((a, b) => (b.year - a.year)).slice(0, 10)
+
+latestMovies.map(movie => {
+    document.getElementById("latest").innerHTML += `
+    <div>
+    <a href=""><div><img src="${movie.image}" alt=""></div>
+    
+</a>
+<div class="movie-desc">
+<h1 class="title>${movie.title}</h1>
+<p class="dir>${movie.director}</p>
+<p class="year>${movie.year}</p>
+</div>
+</div>
+    `
+})
+
+console.log(latest)
+
+const nextIcon = document.getElementById("nextIcon")
+
