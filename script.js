@@ -96,11 +96,11 @@ actionMovies.forEach(movie => {
 const movies = movieLibrary.map(movie => {
     document.getElementById("container").innerHTML += `
     <div>
-    <div><img src="${movie.image}" alt=""></div>
+    <a href=""><div><img src="${movie.image}" alt=""></div>
     <p>${movie.title}</p>
     <p>${movie.director}</p>
     <p>${movie.year}</p>
-
+</a>
 </div>
     `
 })
