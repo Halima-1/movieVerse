@@ -95,21 +95,26 @@ actionMovies.forEach(movie => {
     console.log(movie.getDetails());
 });
 
-// const movies = movieLibrary.map(movie => {
-//     document.getElementById("container").innerHTML += `
-//     <div>
-//     <a href=""><div><img src="${movie.image}" alt=""></div>
-//     <p class="title>>${movie.title}</p>
-//     <p class="dir>>${movie.director}</p>
-//     <p class="year>>${movie.year}</p>
-// </a>
-// </div>
-//     `
-// })
-// console.log(movies)
+const movies = movieLibrary.map(movie => {
+    document.getElementById("container").innerHTML += `
+    <div>
+    <a href=""><div><img src="${movie.image}" alt=""></div>
+    
+</a>
+<div class="movie-desc">
+<h1 class="title">${movie.title}</h1>
+<p class="dir">Directed by ${movie.director}</p>
+<p class="year">${movie.year}</p>
+</div>
+<button type="button" type="click" item="${movie.id}" onclick="addToLibrary(${movie.id})">Add to Library</button>
+
+</div>
+    `
+})
+console.log(movies)
 
 
-const latestMovies = movieLibrary.slice().sort((a, b) => (b.year - a.year)).slice(0, 10)
+const latestMovies = movieLibrary.slice().sort((a, b) => (b.year - a.year)).slice(0, 8)
 
 latestMovies.map(movie => {
     document.getElementById("latest").innerHTML += `
@@ -175,9 +180,10 @@ function addToLibrary(id) {
     updateLibraryCount();
 }
 
+document.getElementById("libraryIcon").innerHTML = library.length;
+
 function updateLibraryCount() {
     let count = library.reduce((total, movie) => total + movie.quantity, 0);
-    //   document.getElementById("cartLength").innerHTML = count;
     localStorage.setItem("libraryLength", JSON.stringify(count));
     let updateLibrary = localStorage.getItem("libraryLength");
     console.log(count);
@@ -198,6 +204,6 @@ let updateLibrary = localStorage.getItem("libraryLength");
 
 // console.log(count);
 
-let specificUser = localStorage.getItem('loggedinUser');
-specificUser = JSON.parse(specificUser)
+// let specificUser = localStorage.getItem('loggedinUser');
+// specificUser = JSON.parse(specificUser)
 // document.getElementById('greeting').innerHTML = `Good day, ${specificUser.namee}`
